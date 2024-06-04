@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground: #264653;
+    --background: #f4faff;
+    --background-hover: #26262608;
+    --background-active: #2626260f;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground: #264653;
+        --background: #f4faff;
+    }
+}
+
+body {
+    color: var(--foreground);
+    background-color: var(--background);
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+.button-icon,
+.button-icon * {
+    cursor: pointer;
+}
+.button-icon:hover {
+    background-color: var(--background-hover);
+}
+.button-icon:hover * {
+    background-color: transparent;
+}
+.button-icon:active {
+    background-color: var(--background-active);
+}
+.button-icon:hover * {
+    background-color: transparent;
+}
