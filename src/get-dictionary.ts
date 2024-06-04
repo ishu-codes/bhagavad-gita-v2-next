@@ -16,8 +16,8 @@ const dictionaries = {
     mai: () =>
         import("./dictionaries/mai.json").then((module) => module.default),
     ml: () => import("./dictionaries/ml.json").then((module) => module.default),
-    mni: () =>
-        import("./dictionaries/mni.json").then((module) => module.default),
+    // mni: () =>
+    //     import("./dictionaries/mni.json").then((module) => module.default),
     mr: () => import("./dictionaries/mr.json").then((module) => module.default),
     ne: () => import("./dictionaries/ne.json").then((module) => module.default),
     or: () => import("./dictionaries/or.json").then((module) => module.default),
