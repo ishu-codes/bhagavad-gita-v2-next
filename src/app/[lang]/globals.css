@@ -5,8 +5,10 @@
 :root {
     --foreground: #264653;
     --background: #f4faff;
-    --background-hover: #26262608;
-    --background-active: #2626260f;
+    --background-light-hover: #26262608;
+    --background-light-active: #2626260f;
+    --background-dark-hover: #26465310;
+    --background-dark-active: #2646531a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,6 +16,10 @@
         --foreground: #264653;
         --background: #f4faff;
     }
+}
+
+* {
+    user-select: none;
 }
 
 body {
@@ -27,19 +33,38 @@ body {
     }
 }
 
-.button-icon,
-.button-icon * {
+.button-icon-light,
+.button-icon-dark,
+.button-icon-light *,
+.button-icon-dark * {
     cursor: pointer;
 }
-.button-icon:hover {
-    background-color: var(--background-hover);
+.button-icon-light:hover {
+    background-color: var(--background-light-hover);
 }
-.button-icon:hover * {
+.button-icon-light:hover * {
     background-color: transparent;
 }
-.button-icon:active {
-    background-color: var(--background-active);
+.button-icon-light:active {
+    background-color: var(--background-light-active);
 }
-.button-icon:hover * {
+.button-icon-light:hover * {
     background-color: transparent;
 }
+
+.button-icon-dark:hover {
+    background-color: var(--background-dark-hover);
+}
+.button-icon-dark:hover * {
+    background-color: transparent;
+}
+.button-icon-dark:active {
+    background-color: var(--background-dark-active);
+}
+.button-icon-dark:hover * {
+    background-color: transparent;
+}
+
+/* ::selection {
+    background-color: transparent;
+} */

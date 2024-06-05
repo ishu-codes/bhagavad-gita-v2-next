@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Yatra_One, Laila } from "next/font/google";
+import { Yatra_One, Noto_Sans as Laila } from "next/font/google";
 import { i18n, type Locale } from "@/i18n-config";
-import { SystemIcons } from "@/icons";
+import Icons from "@/icons";
 import "./globals.css";
 import { Navbar } from "@/components";
 
 // const inter = Inter({ subsets: ["latin"] });
-const yatraOne = Yatra_One({ weight: "400", subsets: ["devanagari"] });
+// const yatraOne = Yatra_One({ weight: "400", subsets: ["devanagari"] });
 const laila = Laila({ weight: "400", subsets: ["devanagari"] });
 
 export const metadata: Metadata = {
@@ -33,11 +33,9 @@ export default function Root({ children, params }: RootInterface) {
     return (
         <html lang={params.lang}>
             <body className={laila.className}>
-                <SystemIcons />
-                <div className="w-full h-screen">
-                    <Navbar lang={params.lang} />
-                    {children}
-                </div>
+                <Icons />
+                <Navbar lang={params.lang} />
+                <div className="w-full h-screen pt-[5.5rem]">{children}</div>
             </body>
         </html>
     );

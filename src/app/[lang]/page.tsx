@@ -1,8 +1,6 @@
-import { LocaleSwitcher } from "@/components";
 import { getDictionary } from "../../get-dictionary";
 import { Locale } from "../../i18n-config";
-// import Counter from "./components/counter";
-// import LocaleSwitcher from "./components/locale-switcher";
+import { Footer, Home } from "@/components";
 
 export default async function IndexPage({
     params: { lang },
@@ -12,12 +10,10 @@ export default async function IndexPage({
     const dictionary = await getDictionary(lang);
 
     return (
-        <div>
-            {/* <LocaleSwitcher /> */}
-            <p>Current locale: {lang}</p>
-            {/* <LocaleSwitcher /> */}
-            <p>{dictionary["credits"]}</p>
-            {/* <Counter dictionary={dictionary.counter} /> */}
-        </div>
+        <>
+            <Home lang={lang} />
+            {/* <p>{dictionary["credits"]}</p> */}
+            <Footer lang={lang} />
+        </>
     );
 }

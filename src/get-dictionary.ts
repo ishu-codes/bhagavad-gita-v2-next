@@ -10,9 +10,13 @@ const dictionaries = {
     bn: () => import("./dictionaries/bn.json").then((module) => module.default),
     doi: () =>
         import("./dictionaries/doi.json").then((module) => module.default),
+    gom: () =>
+        import("./dictionaries/gom.json").then((module) => module.default),
     gu: () => import("./dictionaries/gu.json").then((module) => module.default),
     hi: () => import("./dictionaries/hi.json").then((module) => module.default),
     kn: () => import("./dictionaries/kn.json").then((module) => module.default),
+    lus: () =>
+        import("./dictionaries/lus.json").then((module) => module.default),
     mai: () =>
         import("./dictionaries/mai.json").then((module) => module.default),
     ml: () => import("./dictionaries/ml.json").then((module) => module.default),

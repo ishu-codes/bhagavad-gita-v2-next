@@ -1,4 +1,5 @@
-import LocaleSwitcher from "./LocaleSwitcher";
 import Navbar from "./Navbar/Navbar";
+import Home from "./Home";
+import Footer from "./Footer";
 
-export { LocaleSwitcher, Navbar };
+export { Home, Navbar, Footer };
