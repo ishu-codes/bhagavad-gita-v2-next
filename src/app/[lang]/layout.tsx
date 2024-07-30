@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
-import { Yatra_One, Noto_Sans as Laila } from "next/font/google";
+import { Yatra_One, Noto_Sans as FontSans } from "next/font/google";
+import { cn } from "@/lib/utils";
 import { i18n, type Locale } from "@/i18n-config";
-import Icons from "@/icons";
-import "./globals.css";
+import { SystemIcons } from "@/icons";
 import { Navbar } from "@/components";
+import "./globals.css";
 
 // const inter = Inter({ subsets: ["latin"] });
 // const yatraOne = Yatra_One({ weight: "400", subsets: ["devanagari"] });
-const laila = Laila({ weight: "400", subsets: ["devanagari"] });
+const fontSans = FontSans({
+    weight: "400",
+    subsets: ["devanagari"],
+    variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
     title: "Bhagavad Gita",
@@ -31,9 +36,14 @@ interface RootInterface {
 
 export default function Root({ children, params }: RootInterface) {
     return (
-        <html lang={params.lang}>
-            <body className={laila.className}>
-                <Icons />
+        <html lang={params.lang} suppressHydrationWarning>
+            <body
+                className={cn(
+                    "min-h-screen bg-background font-sans antialiased",
+                    fontSans.variable
+                )}
+            >
+                <SystemIcons />
                 <Navbar lang={params.lang} />
                 <div className="w-full h-screen pt-[5.5rem]">{children}</div>
             </body>
