@@ -1,4 +1,4 @@
-import { ThemeLight, ThemeDark, ThemeSystem } from "@/icons";
+import { ThemeLight, ThemeDark, ThemeSystem } from "@/icons/ThemeIcons";
 
 export const THEMES = [
     { name: "system", icon: ThemeSystem },

@@ -23,7 +23,7 @@ import {
 
 import { Button } from "../ui/button";
 import { DialogDescription, DialogTitle } from "../ui/dialog";
-import { SearchIcon } from "@/icons";
+import { SearchIcon } from "@/icons/NavIcons";
 
 export default function SearchBar() {
     const [open, setOpen] = useState(false);
@@ -48,7 +48,7 @@ export default function SearchBar() {
         <>
             <Button
                 variant={"outline"}
-                className="border-0 md:border-[1px] md:flex-grow max-w-[20rem] flex justify-between px-0 md:px-4 rounded-full"
+                className="border-0 md:border-[1px] border-border md:flex-grow max-w-[20rem] flex justify-between bg-secondary px-0 md:px-4 rounded-full"
                 onClick={() => setOpen(true)}
             >
                 <div className="flex items-center">

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Yatra_One, Noto_Sans as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { i18n, type Locale } from "@/i18n-config";
-import { SystemIcons } from "@/icons";
 import { Navbar } from "@/components";
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -52,9 +51,8 @@ export default function Root({ children, params }: RootInterface) {
                     disableTransitionOnChange
                 >
                     <div className="w-full h-full bg-background">
-                        <SystemIcons />
                         <Navbar lang={params.lang} />
-                        <div className="w-full h-screen pt-[5.5rem]">
+                        <div className="w-full h-screen pt-[4.5rem]">
                             {children}
                         </div>
                     </div>

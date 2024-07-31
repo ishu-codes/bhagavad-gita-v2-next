@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useTheme } from "next-themes";
 import { THEMES, Theme } from "@/data/themesData";
 import {
     Select,
@@ -9,9 +10,7 @@ import {
     SelectTrigger,
     // SelectValue,
 } from "@/components/ui/select";
-import { ThemeLight } from "@/icons";
-
-import { useTheme } from "next-themes";
+import { ThemeLight } from "@/icons/ThemeIcons";
 
 function ThemeIcon({
     themeName,
@@ -41,7 +40,7 @@ export default function ThemeSelect() {
             onValueChange={(newTheme) => handleThemeChange(newTheme)}
             defaultValue={currentTheme}
         >
-            <SelectTrigger className="w-[80px] rounded-full outline-none">
+            <SelectTrigger className="w-[80px] bg-secondary rounded-full outline-none">
                 <ThemeIcon themeName={currentTheme} className="p-1" />
             </SelectTrigger>
             <SelectContent>

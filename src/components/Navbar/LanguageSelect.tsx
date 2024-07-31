@@ -1,6 +1,6 @@
 "use client";
 
-import { ChangeEvent, useEffect, useState } from "react";
+import { useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { i18n, type Locale } from "@/i18n-config";
 import {
@@ -11,7 +11,7 @@ import {
     // SelectValue,
 } from "@/components/ui/select";
 import { useLangStore } from "@/stores";
-import { LanguageIcon } from "@/icons";
+import { LanguageIcon } from "@/icons/NavIcons";
 
 export default function LanguageSelect(params: { lang: Locale["code"] }) {
     const [currentLang, setCurrentLang] = useLangStore((state) => [
@@ -49,9 +49,9 @@ export default function LanguageSelect(params: { lang: Locale["code"] }) {
             onValueChange={(newLangCode) => changeLang(newLangCode)}
             defaultValue={params.lang}
         >
-            <SelectTrigger className="w-auto rounded-full outline-none">
+            <SelectTrigger className="w-auto bg-secondary rounded-full outline-none">
                 <LanguageIcon className="p-1" />
-                <p className="hidden md:block text-lg ml-2 mr-4">
+                <p className="hidden md:block text-lg text-secondary-foreground ml-2 mr-4">
                     {currentLang.local}
                 </p>
             </SelectTrigger>
