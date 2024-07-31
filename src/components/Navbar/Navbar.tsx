@@ -8,7 +8,7 @@ import "./Navbar.css";
 
 export default function Navbar(params: { lang: Locale["code"] }) {
     return (
-        <header className="navbar bg-background fixed w-full flex items-center justify-between px-4 md:px-6 py-2">
+        <header className="navbar bg-background dark:bg-black fixed w-full flex items-center justify-between px-4 md:px-6 py-2">
             <figure className="py-2">
                 <Link href={`/${params.lang}`}>
                     <img className="h-8 md:h-10" src={logo.src} alt="logo" />

@@ -1,8 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { THEMES, Theme } from "@/data/themesData";
-import { useThemeStore } from "@/stores";
 import {
     Select,
     SelectContent,
@@ -11,6 +10,8 @@ import {
     // SelectValue,
 } from "@/components/ui/select";
 import { ThemeLight } from "@/icons";
+
+import { useTheme } from "next-themes";
 
 function ThemeIcon({
     themeName,
@@ -25,17 +26,19 @@ function ThemeIcon({
 }
 
 export default function ThemeSelect() {
-    const [currentTheme, setCurrentTheme] = useThemeStore((state) => [
-        state.currentTheme,
-        state.setCurrentTheme,
-    ]);
+    const [currentTheme, setCurrentTheme] = useState(
+        // (typeof localStorage !== "undefined" &&
+        localStorage?.getItem("theme") || ""
+    );
 
-    useEffect(() => {
-        // console.log("rerendering theme select");
-    }, [currentTheme]);
+    const { setTheme } = useTheme();
+    const handleThemeChange = (newTheme: string) => {
+        setTheme(newTheme);
+        setCurrentTheme(newTheme);
+    };
     return (
         <Select
-            onValueChange={(newTheme) => setCurrentTheme(newTheme)}
+            onValueChange={(newTheme) => handleThemeChange(newTheme)}
             defaultValue={currentTheme}
         >
             <SelectTrigger className="w-[80px] rounded-full outline-none">
@@ -44,7 +47,8 @@ export default function ThemeSelect() {
             <SelectContent>
                 {THEMES.map((theme, index) => (
                     <SelectItem key={index} value={theme.name}>
-                        {theme.name}
+                        {theme.name.slice(0, 1).toUpperCase() +
+                            theme.name.slice(1)}
                     </SelectItem>
                 ))}
             </SelectContent>

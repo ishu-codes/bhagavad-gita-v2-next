@@ -4,6 +4,8 @@ import { cn } from "@/lib/utils";
 import { i18n, type Locale } from "@/i18n-config";
 import { SystemIcons } from "@/icons";
 import { Navbar } from "@/components";
+import { ThemeProvider } from "@/components/theme-provider";
+
 import "./globals.css";
 
 // const inter = Inter({ subsets: ["latin"] });
@@ -39,13 +41,24 @@ export default function Root({ children, params }: RootInterface) {
         <html lang={params.lang} suppressHydrationWarning>
             <body
                 className={cn(
-                    "min-h-screen bg-background font-sans antialiased",
+                    "min-h-screen font-sans antialiased",
                     fontSans.variable
                 )}
             >
-                <SystemIcons />
-                <Navbar lang={params.lang} />
-                <div className="w-full h-screen pt-[5.5rem]">{children}</div>
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem
+                    disableTransitionOnChange
+                >
+                    <div className="w-full h-full bg-background">
+                        <SystemIcons />
+                        <Navbar lang={params.lang} />
+                        <div className="w-full h-screen pt-[5.5rem]">
+                            {children}
+                        </div>
+                    </div>
+                </ThemeProvider>
             </body>
         </html>
     );

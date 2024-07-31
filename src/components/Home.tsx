@@ -48,7 +48,7 @@ const verseIcons = [
 export default async function Home(props: { lang: Locale["code"] }) {
     let dictionary = await getDictionary(props.lang);
     return (
-        <div className="w-full flex flex-col md:flex-row pt-8">
+        <div className="w-full bg-background text-foreground flex flex-col md:flex-row pt-8">
             <div className="left flex-grow space-y-12 pb-4">
                 {sections.map((section, index) => (
                     <div

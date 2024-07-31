@@ -1,9 +1,9 @@
 import { ThemeLight, ThemeDark, ThemeSystem } from "@/icons";
 
 export const THEMES = [
-    { name: "Light", icon: ThemeLight },
-    { name: "Dark", icon: ThemeDark },
-    { name: "System", icon: ThemeSystem },
+    { name: "system", icon: ThemeSystem },
+    { name: "light", icon: ThemeLight },
+    { name: "dark", icon: ThemeDark },
 ];
 
 export type Theme = (typeof THEMES)[number];
