@@ -38,11 +38,21 @@ interface RootInterface {
 export default function Root({ children, params }: RootInterface) {
     return (
         <html lang={params.lang} suppressHydrationWarning>
+            <head>
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Yatra+One&display=swap"
+                    rel="stylesheet"
+                />
+            </head>
             <body
-                className={cn(
-                    "min-h-screen font-sans antialiased",
-                    fontSans.variable
-                )}
+                className="min-h-screen antialiased font-noto-sans"
+
+                // className={cn(
+                //     "min-h-screen font-sans antialiased",
+                //     fontSans.variable
+                // )}
             >
                 <ThemeProvider
                     attribute="class"

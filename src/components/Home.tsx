@@ -1,6 +1,7 @@
 import Link from "next/link";
 // import { redirect } from "next/navigation";
-import { Yatra_One } from "next/font/google";
+import { Laila as Yatra_One } from "next/font/google";
+import { cn } from "@/lib/utils";
 import { type Locale } from "@/i18n-config";
 import { getDictionary } from "@/get-dictionary";
 import {
@@ -20,7 +21,11 @@ import {
     VersesIcon,
 } from "@/icons/HomeIcons";
 
-const yatraOne = Yatra_One({ weight: "400", subsets: ["devanagari"] });
+const yatraOne = Yatra_One({
+    weight: "400",
+    subsets: ["devanagari"],
+    variable: "--font-yatra",
+});
 
 const sections = [
     {
@@ -72,7 +77,11 @@ export default async function Home(props: { lang: Locale["code"] }) {
                         key={index}
                     >
                         <h1
-                            className={`text-2xl font-bold uppercase ${yatraOne.className}`}
+                            className="text-2xl font-bold uppercase font-yatra"
+                            // className={cn(
+                            //     "text-2xl font-bold uppercase",
+                            //     yatraOne.variable
+                            // )}
                         >
                             {section.name}
                         </h1>
@@ -88,9 +97,7 @@ export default async function Home(props: { lang: Locale["code"] }) {
                                     >
                                         <subsec.icon className="p-2" />
                                     </Link>
-                                    <h2
-                                        className={`text-center text-lg text-secondary-foreground font-medium ${yatraOne.className}`}
-                                    >
+                                    <h2 className="text-center text-lg text-secondary-foreground font-medium font-yatra">
                                         {subsec.name}
                                     </h2>
                                 </div>
@@ -101,7 +108,11 @@ export default async function Home(props: { lang: Locale["code"] }) {
 
                 <div className="flex flex-col items-center px-24 space-y-4">
                     <h1
-                        className={`text-2xl font-bold uppercase ${yatraOne.className}`}
+                        // className={cn(
+                        //     "text-2xl font-bold uppercase",
+                        //     yatraOne.variable
+                        // )}
+                        className={`text-2xl font-bold uppercase font-yatra`}
                     >
                         Blogs
                     </h1>
@@ -115,9 +126,9 @@ export default async function Home(props: { lang: Locale["code"] }) {
                         </div>
                         <Link
                             href={`/${props.lang}/blogs`}
-                            className="p-2 hover:bg-accent rounded-full"
+                            className="hover:bg-accent rounded-full"
                         >
-                            <ForwardIcon className="" />
+                            <ForwardIcon className="p-2" />
                         </Link>
                     </div>
                 </div>
@@ -126,15 +137,11 @@ export default async function Home(props: { lang: Locale["code"] }) {
             {/* Verse Section */}
 
             <div className="w-1/2 flex flex-col items-center border-l-2 border-border pt-4">
-                <h1
-                    className={`text-2xl font-bold text-secondary-foreground uppercase ${yatraOne.className}`}
-                >
+                <h1 className="text-2xl font-bold uppercase font-yatra">
                     Verse of the day
                 </h1>
                 <div className="w-full flex flex-col items-center px-32 py-4 space-y-6">
-                    <div
-                        className={`w-full text-center p-4 text-2xl rounded-x ${yatraOne.className}`}
-                    >
+                    <div className="w-full text-center p-4 text-2xl rounded-x font-yatra">
                         {verse.verse.map((part, index) => (
                             <h2 key={index}>{part}</h2>
                         ))}
