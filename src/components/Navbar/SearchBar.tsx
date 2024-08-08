@@ -53,7 +53,7 @@ export default function SearchBar() {
             >
                 <div className="flex items-center">
                     <SearchIcon className="p-1" />
-                    <span className="hidden md:block text-lg font-normal text-secondary-foreground ml-3 mr-5">
+                    <span className="hidden md:block text-lg font-normal text-muted-foreground ml-3 mr-5">
                         यहाँ खोजें..
                     </span>
                 </div>

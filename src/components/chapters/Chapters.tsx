@@ -71,7 +71,7 @@ export default function Chapters(props: Props) {
                                 <h3 className="w-full text-xl font-semibold">
                                     {chapter.name}
                                 </h3>
-                                <p className="w-full text-sm font-normal text-secondary-foreground">
+                                <p className="w-full text-sm font-normal text-muted-foreground">
                                     {chapter.sectionsDesc}
                                 </p>
                             </div>
