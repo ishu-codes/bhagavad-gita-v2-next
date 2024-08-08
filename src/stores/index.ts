@@ -1,2 +1,3 @@
 import useLangStore from "./langStore";
-export { useLangStore };
+import { useCurrentChapterStore } from "./chapterStore";
+export { useLangStore, useCurrentChapterStore };

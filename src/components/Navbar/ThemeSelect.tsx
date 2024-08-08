@@ -25,9 +25,11 @@ function ThemeIcon({
 }
 
 export default function ThemeSelect() {
+    let themeValue = localStorage.getItem("theme");
     const [currentTheme, setCurrentTheme] = useState(
         // (typeof localStorage !== "undefined" &&
-        localStorage?.getItem("theme") || ""
+        // localStorage?.getItem("theme") || ""
+        themeValue || ""
     );
 
     const { setTheme } = useTheme();
@@ -40,7 +42,7 @@ export default function ThemeSelect() {
             onValueChange={(newTheme) => handleThemeChange(newTheme)}
             defaultValue={currentTheme}
         >
-            <SelectTrigger className="w-[80px] bg-secondary rounded-full outline-none">
+            <SelectTrigger className="w-[80px] dark:bg-secondary rounded-full outline-none">
                 <ThemeIcon themeName={currentTheme} className="p-1" />
             </SelectTrigger>
             <SelectContent>

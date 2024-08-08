@@ -1,4 +1,8 @@
 {
+    "font": {
+        "url": "https://fonts.googleapis.com/css2?family=Noto+Sans+Gurmukhi:wght@100..900&display=swap",
+        "family": "\"Noto Sans Gurmukhi\", sans-serif"
+    },
     "credits": "ਈਸ਼ੂ ਦੁਆਰਾ ਬਣਾਇਆ ਗਿਆ",
     "verse_meaning": "ਹੇ ਭਾਰਤੀਓ! ਜਦੋਂ ਵੀ ਧਾਰਮਿਕਤਾ ਦਾ ਘਾਟਾ ਅਤੇ ਅਧਰਮ ਦਾ ਵਾਧਾ ਹੁੰਦਾ ਹੈ, ਤਦ ਮੈਂ ਆਪ ਜਨਮ ਲੈਂਦਾ ਹਾਂ।"
 }

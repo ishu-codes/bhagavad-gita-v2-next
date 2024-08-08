@@ -1,4 +1,8 @@
 {
+    "font": {
+        "url": "https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap",
+        "family": "\"Noto Sans\", sans-serif"
+    },
     "credits": "Ishu siam a ni",
     "verse_meaning": "Hei India mite hi! Felna hloh leh fel lohna a punna a awm apiangin keimah ngeiin ka piang thin."
 }

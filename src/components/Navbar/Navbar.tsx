@@ -1,11 +1,16 @@
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import type { Locale } from "@/i18n-config";
 import LanguageSelect from "./LanguageSelect";
-import ThemeSelect from "./ThemeSelect";
+// import ThemeSelect from "./ThemeSelect";
 import SearchBar from "./SearchBar";
 import logo from "@/assets/logo.svg";
 import logoLight from "@/assets/logo-light.svg";
 import "./Navbar.css";
+
+const DynamicThemeSelect = dynamic(() => import("./ThemeSelect"), {
+    ssr: false,
+});
 
 export default function Navbar(params: { lang: Locale["code"] }) {
     return (
@@ -30,7 +35,7 @@ export default function Navbar(params: { lang: Locale["code"] }) {
             <SearchBar />
             <div className="hidden md:flex items-center space-x-4">
                 <LanguageSelect lang={params.lang} />
-                <ThemeSelect />
+                <DynamicThemeSelect />
             </div>
         </header>
     );

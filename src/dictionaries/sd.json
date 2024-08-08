@@ -1,4 +1,8 @@
 {
+    "font": {
+        "url": "https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap",
+        "family": "\"Noto Sans Arabic\", sans-serif"
+    },
     "credits": "ايشو پاران ٺاهي وئي",
     "verse_meaning": "اي هندستاني! جڏهن به نيڪيءَ جو نقصان ٿيندو آهي ۽ بي انصافيءَ ۾ اضافو ٿيندو آهي، تڏهن مان پاڻ جنم وٺندو آهيان."
 }

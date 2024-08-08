@@ -1,4 +1,8 @@
 {
+    "font": {
+        "url": "https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap",
+        "family": "\"Noto Sans Arabic\", sans-serif"
+    },
     "credits": "ایشو نے تخلیق کیا۔",
     "verse_meaning": "ارے ہندوستانیوں! جب بھی نیکی کا نقصان ہوتا ہے اور بددیانتی میں اضافہ ہوتا ہے تو میں خود جنم لیتا ہوں۔"
 }

@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { i18n, type Locale } from "@/i18n-config";
 import { Navbar } from "@/components";
 import { ThemeProvider } from "@/components/theme-provider";
+import { getDictionary } from "../../get-dictionary";
 
 import "./globals.css";
 
@@ -35,24 +36,30 @@ interface RootInterface {
     params: { lang: Locale["code"] };
 }
 
-export default function Root({ children, params }: RootInterface) {
+export default async function Root({ children, params }: RootInterface) {
+    const dictionary = await getDictionary(params.lang);
     return (
         <html lang={params.lang} suppressHydrationWarning>
             <head>
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link
-                    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Yatra+One&display=swap"
+                    href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap"
                     rel="stylesheet"
                 />
+                <link rel="stylesheet" href={dictionary.font.url} />
+                {/* <link
+                    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Yatra+One&display=swap"
+                    rel="stylesheet"
+                /> */}
             </head>
             <body
                 className="min-h-screen antialiased font-noto-sans"
-
                 // className={cn(
                 //     "min-h-screen font-sans antialiased",
                 //     fontSans.variable
                 // )}
+                style={{ fontFamily: ` ${dictionary.font.family}` }}
             >
                 <ThemeProvider
                     attribute="class"
@@ -60,7 +67,7 @@ export default function Root({ children, params }: RootInterface) {
                     enableSystem
                     disableTransitionOnChange
                 >
-                    <div className="w-full h-full bg-background">
+                    <div className="w-full h-full bg-background text-foreground">
                         <Navbar lang={params.lang} />
                         <div className="w-full h-screen pt-[4.5rem]">
                             {children}

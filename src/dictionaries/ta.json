@@ -1,4 +1,8 @@
 {
+    "font": {
+        "url": "https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@100..900&display=swap",
+        "family": "\"Noto Sans Tamil\", sans-serif"
+    },
     "credits": "இஷுவால் உருவாக்கப்பட்டது",
     "verse_meaning": "ஹே இந்தியர்களே! எப்பொழுது சன்மார்க்கம் குறைகிறதோ, அநியாயம் பெருகுகிறதோ, அப்போது நானே பிறப்பேன்."
 }

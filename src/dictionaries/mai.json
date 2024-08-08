@@ -1,4 +1,8 @@
 {
+    "font": {
+        "url": "https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@100..900&display=swap",
+        "family": "\"Noto Sans Devanagari\", sans-serif"
+    },
     "credits": "ईशु द्वारा निर्मित",
     "verse_meaning": "हे भारतीय लोकनि ! जखन कखनो धर्मक हानि आ अधर्मक वृद्धि होइत अछि तखन हम स्वयं जन्म लैत छी ।"
 }

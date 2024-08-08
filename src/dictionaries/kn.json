@@ -1,4 +1,8 @@
 {
+    "font": {
+        "url": "https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@100..900&display=swap",
+        "family": "\"Noto Sans Kannada\", sans-serif"
+    },
     "credits": "ಇಶು ರಚಿಸಿದ್ದಾರೆ",
     "verse_meaning": "ಹೇ ಭಾರತೀಯರೇ! ಯಾವಾಗ ಸದಾಚಾರದ ನಷ್ಟ ಮತ್ತು ಅಧರ್ಮವು ಹೆಚ್ಚುತ್ತದೆಯೋ, ಆಗ ನಾನೇ ಜನ್ಮ ಪಡೆಯುತ್ತೇನೆ."
 }

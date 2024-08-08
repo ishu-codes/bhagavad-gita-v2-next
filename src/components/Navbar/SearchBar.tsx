@@ -48,12 +48,12 @@ export default function SearchBar() {
         <>
             <Button
                 variant={"outline"}
-                className="border-0 md:border-[1px] border-border md:flex-grow max-w-[20rem] flex justify-between bg-secondary px-0 md:px-4 rounded-full"
+                className="border-0 md:border-[1px] border-border md:flex-grow max-w-[20rem] flex justify-between dark:bg-secondary px-0 md:px-4 rounded-full"
                 onClick={() => setOpen(true)}
             >
                 <div className="flex items-center">
                     <SearchIcon className="p-1" />
-                    <span className="hidden md:block text-lg text-muted-foreground ml-3 mr-5">
+                    <span className="hidden md:block text-lg font-normal text-secondary-foreground ml-3 mr-5">
                         यहाँ खोजें..
                     </span>
                 </div>

@@ -49,9 +49,9 @@ export default function LanguageSelect(params: { lang: Locale["code"] }) {
             onValueChange={(newLangCode) => changeLang(newLangCode)}
             defaultValue={params.lang}
         >
-            <SelectTrigger className="w-auto bg-secondary rounded-full outline-none">
+            <SelectTrigger className="w-auto dark:bg-secondary rounded-full outline-none">
                 <LanguageIcon className="p-1" />
-                <p className="hidden md:block text-lg text-secondary-foreground ml-2 mr-4">
+                <p className="hidden md:block text-lg ml-2 mr-4">
                     {currentLang.local}
                 </p>
             </SelectTrigger>
