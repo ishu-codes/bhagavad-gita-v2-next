@@ -1,20 +1,16 @@
 import { create } from "zustand";
-import { chaptersData } from "@/data/chaptersData";
 
 interface currentChapterStore {
-    currentChapterId: string;
-    setCurrentChapterId: (newChapterId: string) => void;
+  chId: string;
+  setChId: (newChId: string) => void;
 }
 
 const useCurrentChapterStore = create<currentChapterStore>((set) => ({
-    currentChapterId: "ch01",
-    setCurrentChapterId: (newChapterId: string) => {
-        let newChapter = chaptersData.find((ch) => ch.id == newChapterId);
-        if (newChapter)
-            return void set({
-                currentChapterId: newChapterId,
-            });
-    },
+  chId: "ch01",
+  setChId: (newChId: string) =>
+    set({
+      chId: newChId,
+    }),
 }));
 
 export { useCurrentChapterStore };

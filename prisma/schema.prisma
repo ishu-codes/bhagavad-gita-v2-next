@@ -1,0 +1,51 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Chapter {
+  id           String    @id @db.VarChar(5)
+  name         String    @unique @db.VarChar(255)
+  desc         String
+  verses_count Int       @db.SmallInt
+  sections  Section[]
+
+  @@map("chapters")
+}
+
+model Section {
+  id          String  @id @db.VarChar(5)
+  title       String
+  chapter     String  @db.VarChar(5)
+  groups   Group[]
+  chapters Chapter @relation(fields: [chapter], references: [id], onDelete: Cascade, onUpdate: Restrict)
+
+  @@map("sections")
+}
+
+model Group {
+  id          String   @id @db.VarChar(25)
+  translation String
+  meanings    Json
+  section     String   @db.VarChar(5)
+  sections Section  @relation(fields: [section], references: [id], onDelete: Cascade, onUpdate: Restrict)
+  phrases Phrase[]
+
+  @@index([meanings], map: "meanings")
+  @@map("groups")
+}
+
+model Phrase {
+  id        String @id @db.VarChar(7)
+  code      String @db.VarChar(5)
+  title     String @db.VarChar(255)
+  group     String @db.VarChar(25)
+  groups Group  @relation(fields: [group], references: [id], onDelete: Cascade, onUpdate: Restrict)
+
+  @@index([title], map: "subverse")
+  @@map("phrases")
+}
