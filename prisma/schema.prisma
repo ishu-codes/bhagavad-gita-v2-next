@@ -8,44 +8,55 @@ datasource db {
 }
 
 model Chapter {
-  id           String    @id @db.VarChar(5)
+  id           String    @id @default(cuid())
+  code         String    @db.VarChar(5)
   name         String    @unique @db.VarChar(255)
   desc         String
   verses_count Int       @db.SmallInt
-  sections  Section[]
+  lang         String    @db.VarChar(3)
+  sections     Section[]
 
+  @@unique([code, lang])
   @@map("chapters")
 }
 
 model Section {
-  id          String  @id @db.VarChar(5)
-  title       String
-  chapter     String  @db.VarChar(5)
+  id       String  @id @default(cuid())
+  code     String  @db.VarChar(5)
+  title    String
+  chapCode String
+  chapLang String
   groups   Group[]
-  chapters Chapter @relation(fields: [chapter], references: [id], onDelete: Cascade, onUpdate: Restrict)
+  chapters Chapter @relation(fields: [chapCode, chapLang], references: [code, lang], onDelete: Cascade, onUpdate: Restrict)
 
+  @@unique([code, chapLang])
   @@map("sections")
 }
 
 model Group {
-  id          String   @id @db.VarChar(25)
+  id          String  @id @default(cuid())
+  code        String  @db.VarChar(25)
   translation String
   meanings    Json
-  section     String   @db.VarChar(5)
-  sections Section  @relation(fields: [section], references: [id], onDelete: Cascade, onUpdate: Restrict)
-  phrases Phrase[]
+  secCode     String
+  secLang     String
+  sections    Section @relation(fields: [secCode, secLang], references: [code, chapLang], onDelete: Cascade, onUpdate: Restrict)
+  // phrases     Phrase[]
 
+  @@unique([code, secLang])
   @@index([meanings], map: "meanings")
   @@map("groups")
 }
 
 model Phrase {
-  id        String @id @db.VarChar(7)
-  code      String @db.VarChar(5)
+  id        String @id @default(cuid())
+  code      String @db.VarChar(7)
+  num       String @db.VarChar(5)
   title     String @db.VarChar(255)
-  group     String @db.VarChar(25)
-  groups Group  @relation(fields: [group], references: [id], onDelete: Cascade, onUpdate: Restrict)
+  groupCode String @db.VarChar(25)
+  script    String @db.VarChar(3)
 
+  @@unique([code, script])
   @@index([title], map: "subverse")
   @@map("phrases")
 }

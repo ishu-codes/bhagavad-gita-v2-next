@@ -5,5 +5,5 @@ export default function Page({
 }: {
   params: { lang: Locale["code"] };
 }) {
-  return <Chapters />;
+  return <Chapters lang={lang} />;
 }

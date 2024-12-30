@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
-import { useParams, useRouter, useSearchParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useCurrentChapterStore } from "@/stores";
 import { getChapter } from "@/actions/chapter";
 
@@ -24,18 +23,7 @@ export default function Sections() {
   const currentChId = useCurrentChapterStore((state) => state.chId);
   const [chapter, setChapter] = useState<Chapter | null>();
 
-  // const createQueryString = useCallback(
-  //   (name: string, value: string) => {
-  //       const params = new URLSearchParams(searchParams.toString());
-  //       params.set(name, value);
-
-  //       return params.toString();
-  //   },
-  //   [searchParams]
-  //   );
-
   useEffect(() => {
-    // getSections(currentChId).then((res) => setSections(res));
     getChapter(currentChId).then((res) => setChapter(res));
   }, [currentChId]);
 
@@ -49,10 +37,6 @@ export default function Sections() {
       <div className="w-full h-[calc(100vh-12rem)] pt-4 px-16 flex flex-col items-center overflow-y-auto">
         {chapter?.sections?.map((section, index) => (
           <Button
-            // href={`/${params.lang}/chapters/${section.id.slice(
-            //     4,
-            //     6
-            // )}?sec${section.id.slice(7)}`}
             variant={"ghost"}
             key={index}
             className="w-full h-auto flex rounded-xl py-5 pl-2 pr-4 whitespace-normal"
