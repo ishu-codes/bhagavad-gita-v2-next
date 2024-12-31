@@ -1,8 +1,9 @@
 {
-    "font": {
-        "url": "https://fonts.googleapis.com/css2?family=Noto+Sans+Oriya:wght@100..900&display=swap",
-        "family": "\"Noto Sans Oriya, sans-serif"
-    },
-    "credits": "ଇଶୁ ଦ୍ୱାରା ସୃଷ୍ଟି |",
-    "verse_meaning": "ହେ ଭାରତୀୟମାନେ! ଯେତେବେଳେ ବି ଧାର୍ମିକତା ହାନି ହୁଏ ଏବଂ ଅଧର୍ମର ବୃଦ୍ଧି ହୁଏ, ସେତେବେଳେ ମୁଁ ନିଜେ ଜନ୍ମ କରେ |"
+  "font": {
+    "url": "https://fonts.googleapis.com/css2?family=Noto+Sans+Oriya:wght@100..900&display=swap",
+    "family": "\"Noto Sans Oriya, sans-serif"
+  },
+  "numerals": ["०", "१", "२", "३", "४", "५", "६", "७", "८", "९"],
+  "credits": "ଇଶୁ ଦ୍ୱାରା ସୃଷ୍ଟି |",
+  "verse_meaning": "ହେ ଭାରତୀୟମାନେ! ଯେତେବେଳେ ବି ଧାର୍ମିକତା ହାନି ହୁଏ ଏବଂ ଅଧର୍ମର ବୃଦ୍ଧି ହୁଏ, ସେତେବେଳେ ମୁଁ ନିଜେ ଜନ୍ମ କରେ |"
 }

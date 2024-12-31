@@ -1,8 +1,9 @@
 {
-    "font": {
-        "url": "https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100..900&display=swap",
-        "family": "\"Noto Sans Bengali\", sans-serif"
-    },
-    "credits": "ইশু দ্বারা নির্মিত",
-    "verse_meaning": "হে ভারতীয়রা! যখনই ধার্মিকতার ক্ষয় হয়, অধর্মের বৃদ্ধি ঘটে, তখনই আমি নিজেই জন্ম গ্রহণ করি।"
+  "font": {
+    "url": "https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100..900&display=swap",
+    "family": "\"Noto Sans Bengali\", sans-serif"
+  },
+  "numerals": ["०", "१", "२", "३", "४", "५", "६", "७", "८", "९"],
+  "credits": "ইশু দ্বারা নির্মিত",
+  "verse_meaning": "হে ভারতীয়রা! যখনই ধার্মিকতার ক্ষয় হয়, অধর্মের বৃদ্ধি ঘটে, তখনই আমি নিজেই জন্ম গ্রহণ করি।"
 }

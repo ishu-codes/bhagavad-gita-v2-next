@@ -1,8 +1,9 @@
 {
-    "font": {
-        "url": "https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@100..900&display=swap",
-        "family": "\"Noto Sans Devanagari\", sans-serif"
-    },
-    "credits": "ईशु हाणें तयार केल्लें",
-    "verse_meaning": "हे भारतीय! जेन्ना जेन्ना धर्माचें लुकसाण जाता आनी अधर्माची वाड जाता तेन्ना तेन्ना हांव स्वता जल्म घेता."
+  "font": {
+    "url": "https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@100..900&display=swap",
+    "family": "\"Noto Sans Devanagari\", sans-serif"
+  },
+  "numerals": ["०", "१", "२", "३", "४", "५", "६", "७", "८", "९"],
+  "credits": "ईशु हाणें तयार केल्लें",
+  "verse_meaning": "हे भारतीय! जेन्ना जेन्ना धर्माचें लुकसाण जाता आनी अधर्माची वाड जाता तेन्ना तेन्ना हांव स्वता जल्म घेता."
 }

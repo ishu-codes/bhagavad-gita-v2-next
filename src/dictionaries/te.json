@@ -1,8 +1,9 @@
 {
-    "font": {
-        "url": "https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@100..900&display=swap",
-        "family": "\"Noto Sans Telugu\", sans-serif"
-    },
-    "credits": "ఇషు రూపొందించారు",
-    "verse_meaning": "హే భారతీయులారా! ఎప్పుడైతే ధర్మాన్ని కోల్పోయి, అధర్మం పెరుగుతుందో, అప్పుడు నేనే జన్మ తీసుకుంటాను."
+  "font": {
+    "url": "https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@100..900&display=swap",
+    "family": "\"Noto Sans Telugu\", sans-serif"
+  },
+  "numerals": ["०", "१", "२", "३", "४", "५", "६", "७", "८", "९"],
+  "credits": "ఇషు రూపొందించారు",
+  "verse_meaning": "హే భారతీయులారా! ఎప్పుడైతే ధర్మాన్ని కోల్పోయి, అధర్మం పెరుగుతుందో, అప్పుడు నేనే జన్మ తీసుకుంటాను."
 }
